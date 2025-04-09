@@ -1,0 +1,566 @@
+{
+	"SLM": {
+		"KITConfigurations": {
+			"SLM": {
+				"Type": "Array",
+				"Value": [
+					{
+						"0": "DCA632320589"
+					},
+					{
+						"1": "B827EBC9AE2F"
+					},
+					{
+						"2": "B827EB432312"
+					},
+					{
+						"3": "B827EBAB8673"
+					},
+					{
+						"4": "B827EB365002"
+					},
+					{
+						"5": "B827EBEA7858"
+					},
+					{
+						"6": "B827EBBB8DE8"
+					},
+					{
+						"7": "B827EB059BEB"
+					},
+					{
+						"8": "B827EB9823D8"
+					},
+					{
+						"9": "B827EB700AAE"
+					},
+					{
+						"10": "B827EB6FF394"
+					}
+				],
+				"Description": "0 is for gateway address while all remaining addresses are to be used for SLMs"
+			},
+			"GLM": {
+				"Type": "Array",
+				"Value": [
+					{
+						"0": "DCA632320589"
+					}
+				],
+				"Description": "0 is for gateway address while all remaining addresses are to be used for GLMs"
+			}
+		},
+		"CloudConfigurations": {
+			"Customer": {
+				"Type": "String",
+				"Value": "TekTracking",
+				"Description": ""
+			},
+			"Product": {
+				"Type": "String",
+				"Value": "SLM",
+				"Description": ""
+			},
+			"MQTTServerAddress": {
+				"Type": "String",
+				"Value": "tcp://52.171.141.250:1883",
+				"Description": ""
+			},
+			"HTTPServerAddress": {
+				"Type": "String",
+				"Value": "52.171.141.250:8080",
+				"Description": ""
+			},
+			"Topic": {
+				"Type": "String",
+				"Value": "live",
+				"Description": ""
+			},
+			"UserName": {
+				"Type": "String",
+				"Value": "tdmclient",
+				"Description": ""
+			},
+			"Password": {
+				"Type": "String",
+				"Value": "RWSSadmin123",
+				"Description": ""
+			},
+			"DetailedLogEnabled": {
+				"Type": "Boolean",
+				"Value": true,
+				"Description": ""
+			},
+			"QoS": {
+				"Type": "Int",
+				"Value": 0,
+				"Description": ""
+			},
+			"TimeOut": {
+				"Type": "Int",
+				"Value": 10000,
+				"Description": ""
+			}
+		},
+		"EmailConfigurations": {
+			"UserName": {
+				"Type": "String",
+				"Value": "user1@gmail.com",
+				"Description": ""
+			},
+			"Password": {
+				"Type": "String",
+				"Value": "railgroup.tm@",
+				"Description": ""
+			},
+			"SMTP_URL": {
+				"Type": "String",
+				"Value": "smtp://smtp.gmail.com:587",
+				"Description": ""
+			},
+			"TO": {
+				"Type": "StringArray",
+				"Value": [
+					"abc@gmail.com"
+				],
+				"Description": ""
+			},
+			"Cc": {
+				"Type": "StringArray",
+				"Value": [
+					""
+				],
+				"Description": ""
+			}
+		},
+		"EIPConfigurations": {
+			"DetailedLogEnabled": {
+				"Type": "Boolean",
+				"Value": true,
+				"Description": ""
+			},
+			"NO_DATA_RCVD_TIMEOUT": {
+				"Type": "UInt32",
+				"Value": 48,
+				"Description": "This value is in hours"
+			},
+			"VALIDATION_WINDOW_TIMEOUT": {
+				"Type": "UInt16",
+				"Value": 1,
+				"Description": "This value is MULTIPLES OF 30 SECONDS"
+			},
+			"BLINK_COUNT_ERROR_MARGIN": {
+				"Type": "UInt8",
+				"Value": 20,
+				"Description": "This value can be in range from-100"
+			},
+			"NODES_DETECTION_DATA_PERCENTAGE": {
+				"Type": "UInt8",
+				"Value": 50,
+				"Description": "This value can be in range from-100"
+			},
+			"LIGHT_OUT_ALERT_CONSECUTIVE_CROSSING_COUNTS": {
+				"Type": "UInt8",
+				"Value": 4,
+				"Description": "Generate light out alert if light is faulty for consecutive number of crossings"
+			}
+		},
+		"GLMAlertConfigurations": {
+			"MinFlashrateLimit": {
+				"Type": "UInt8",
+				"Value": 35,
+				"Description": ""
+			},
+			"MaxFlashrateLimit": {
+				"Type": "UInt8",
+				"Value": 65,
+				"Description": ""
+			},
+			"FlashRateWarningMonitorTimeMinutes": {
+				"Type": "UInt16",
+				"Value": 2880,
+				"Description": "Flash rate monitor time since first warning occured in minutes"
+			},
+			"FlashRateDayWarningPercentage": {
+				"Type": "UInt8",
+				"Value": 60,
+				"Description": "percent of warning counts in a day during monitoring time"
+			},
+			"FlashRateNightWarningPercentage": {
+				"Type": "UInt8",
+				"Value": 20,
+				"Description": "percent of warning counts in a night during monitoring time"
+			},
+			"TimeDayStart": {
+				"Type": "UInt8",
+				"Value": 5,
+				"Description": ""
+			},
+			"TimeDayEnd": {
+				"Type": "UInt8",
+				"Value": 21,
+				"Description": ""
+			},
+			"MinDayCrossings": {
+				"Type": "UInt8",
+				"Value": 3,
+				"Description": "minimum data available at day to make decession"
+			},
+			"MinNightCrossings": {
+				"Type": "UInt8",
+				"Value": 2,
+				"Description": "minimum data available at night to make decision"
+			},
+			"TrainApproachTimeSec": {
+				"Type": "UInt16",
+				"Value": 30,
+				"Description": "Maximum time for a train to reach crossing in sec"
+			},
+			"TrainCrossingTimeMinutes": {
+				"Type": "UInt16",
+				"Value": 20,
+				"Description": "Maximum time for a train to cross the crossing in minutes"
+			}
+		},
+		"SLMNodeOrientationAlertConfigurations": {
+			"AlertEnabled": {
+				"Type": "Bool",
+				"Value": "false",
+				"Description": "enabl/disable alert"
+			},
+			"MinFluctuatingAngle": {
+				"Type": "Int",
+				"Value": 1000,
+				"Description": "Do not store actual angle if angle is fluctuating, 1.67 degree = 167 value"
+			},
+			"MinRollAngleChange": {
+				"Type": "Int",
+				"Value": 2000,
+				"Description": "minimum roll angle change to generate alert"
+			},
+			"MinPitchAngleChange": {
+				"Type": "Int",
+				"Value": 2000,
+				"Description": "minimum pitch angle change to generate alert"
+			},
+			"MinYawAngleChange": {
+				"Type": "Int",
+				"Value": 2000,
+				"Description": "minimum yaw angle change to generate alert"
+			},
+			"AlertClearThresholdAngle": {
+				"Type": "Int",
+				"Value": 2000,
+				"Description": "clear alert if current and actual orientation is within range"
+			}
+		},
+		"BellAudiDetectionNodes": {
+			"NodeIds": {
+				"Type": "Array",
+				"Value": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			},
+			"Description": "SLM Node Ids in int whose audio shall be used for bell detection"
+		},
+		"MagnetoCalibratedSlmNodes": {
+			"NodeIds": {
+				"Type": "Array",
+				"Value": []
+			},
+			"Description": "SLM Node Ids in int whose Magnerometer is calibrated"
+		},
+		"ZMQConfigurations": {
+			"PING_LOSS_PERCENTAGE": {
+				"Type": "UInt8",
+				"Value": 20,
+				"Description": ""
+			},
+			"DetailedLogEnabled": {
+				"Type": "Boolean",
+				"Value": false,
+				"Description": ""
+			},
+			"ReScanNodesTimeout": {
+				"Type": "UInt8",
+				"Value": 1,
+				"Description": "This value is in minutes"
+			}
+		}
+	},
+	"NodeConfigurations": {
+		"LOGGING_PARAMETERS": {
+			"DetailedLogEnabled": {
+				"Description": "DetailedLogEnabled",
+				"Type": "Bool",
+				"Value": true
+			},
+			"ExtensiveLogEnabled": {
+				"Description": "ExtensiveLogEnabled",
+				"Type": "Bool",
+				"Value": true
+			}
+		},
+		"IMAGE_ALARM_TIMERS": {
+			"ImageAlarm1": {
+				"Type": "Array",
+				"Value": [
+					10,
+					42,
+					0
+				],
+				"Description": "Hours are in 24-h time standard, H-M-S"
+			},
+			"ImageAlarm2": {
+				"Type": "Array",
+				"Value": [
+					14,
+					50,
+					0
+				],
+				"Description": "Hours are in 24-h time standard, H-M-S"
+			}
+		},
+		"SYSTEM_STATS_PARAMETERS": {
+			"PERIODIC_SYSTEM_STATS_TIMEOUT": {
+				"Description": "Timer Based System Stats In Minutes",
+				"Type": "UInt16",
+				"Value": 5
+			}
+		},
+		"LIGHTSENSOR_PARAMETERS": {
+			"ADC_DATA_AVG_COUNT": {
+				"Description": "",
+				"Type": "UInt8",
+				"Value": 3
+			},
+			"LUX_RANGE": {
+				"Description": "",
+				"Type": "UInt8",
+				"Value": 8
+			},
+			"INTERRUPT_THRESHOLD_TOP": {
+				"Description": " Value Range = 0 - 4095 ",
+				"Type": "UInt16",
+				"Value": 200
+			},
+			"INTERRUPT_THRESHOLD_BOTTOM": {
+				"Description": " Value Range = 0 - 4095 ",
+				"Type": "UInt16",
+				"Value": 2000
+			},
+			"LUX_CALIBRATION_MULTIPLE": {
+				"Description": "",
+				"Type": "UInt16",
+				"Value": 16250
+			}
+		},
+		"LIGHT_DETECTION_PARAMETERS": {
+			"TIMEOUT_AFTER_LAST_DATA_COLLECTION": {
+				"Description": "in milliseconds",
+				"Type": "UInt16",
+				"Value": 5000
+			},
+			"LIGHT_OK_LUX_THRESHOLD": {
+				"Description": "",
+				"Type": "UInt16",
+				"Value": 500
+			},
+			"LIGHT_OFF_LUX_THRESHOLD": {
+				"Description": "",
+				"Type": "UInt16",
+				"Value": 200
+			},
+			"LIGHT_SENSOR_LOG_ENABLE": {
+				"Description": "",
+				"Type": "Bool",
+				"Value": true
+			},
+			"LIGHT_BLINK_COUNTS": {
+				"Description": "",
+				"Type": "UInt16",
+				"Value": 0
+			}
+		},
+		"AUDIO_DETECTION_PARAMETERS": {
+			"AUDIO_DETECTION_START_DELAY": {
+				"Description": "In milliseconds",
+				"Type": "UInt16",
+				"Value": 1000
+			},
+			"BAND_PASS_FILTER_TYPE": {
+				"Description": "0 = NoFilter, 1 = 3.5-5.5kHz, 2 = 2.5-5.5kHz, 3 = 2.0-6.0kHz, 4 = 1.7-2.4kHz, 255 = AUDIO DISABLED",
+				"Type": "UInt8",
+				"Value": 3
+			},
+			"CHUNK_SIZE_LEFT_SHIFT": {
+				"Description": "In powers of 2, MAX = 16. MIN = 7",
+				"Type": "UInt8",
+				"Value": 7
+			},
+			"UPLOAD_RAW_AUDIO": {
+				"Description": "",
+				"Type": "Bool",
+				"Value": true
+			}
+		},
+		"AUDIO_FILE_PARAMETERS": {
+			"CHANNEL_MONO": {
+				"Description": "",
+				"Type": "Bool",
+				"Value": 1
+			},
+			"RAW_FORMAT": {
+				"Description": "wav format:false, raw format:true",
+				"Type": "Bool",
+				"Value": false
+			},
+			"SAMPLING_RATE": {
+				"Description": "Should be between 10k and 44k",
+				"Type": "UInt32",
+				"Value": 15000
+			},
+			"RECORDING_DURATION": {
+				"Description": "Recording duration in seconds after detection",
+				"Type": "UInt32",
+				"Value": 5
+			}
+		},
+		"ACCEL_LOGIC_PARAMETERS": {
+			"m_AccelWeakDetectionThreshold": {
+				"Description": "",
+				"Type": "UInt32",
+				"Value": 100000
+			},
+			"m_AccelModerateDetectionThreshold": {
+				"Description": "",
+				"Type": "UInt32",
+				"Value": 150000
+			},
+			"m_AccelStrongDetectionThreshold": {
+				"Description": "",
+				"Type": "UInt32",
+				"Value": 200000
+			},
+			"m_AccelExtremeDetectionThreshold": {
+				"Description": "",
+				"Type": "Int16",
+				"Value": 400000
+			},
+			"m_AccelClearanceThreshold": {
+				"Description": "",
+				"Type": "UInt32",
+				"Value": 100000
+			},
+			"m_AccelDetectionWindow": {
+				"Description": "",
+				"Type": "Int16",
+				"Value": 25
+			},
+			"m_AccelMinDetectionsCount": {
+				"Description": "",
+				"Type": "Int16",
+				"Value": 22
+			},
+			"m_AccelClearanceWindow": {
+				"Description": "",
+				"Type": "Int16",
+				"Value": 25
+			},
+			"m_AccelMinClearanceCount": {
+				"Description": "",
+				"Type": "Int16",
+				"Value": 22
+			}
+		},
+		"EXCESSIVE_VIBRATION_PARAMETERS": {
+			"MIN_PERSISTENCE_TIME": {
+				"Description": "in 10th of mili seconds",
+				"Type": "UInt16",
+				"Value": 50
+			},
+			"MAX_VIB_COUNTER": {
+				"Description": "max limit vibration counter per specified time",
+				"Type": "UInt16",
+				"Value": 5
+			},
+			"MAX_VIB_COUNTER_RESET_TIME": {
+				"Description": "time in half hours after which MAX_VIB_COUNTER is reset",
+				"Type": "UInt16",
+				"Value": 2
+			},
+			"ENABLE_IMAGE_CAPTURE_EVENT": {
+				"Description": "enable or disable image capture when excessive vibration occurred",
+				"Type": "Bool",
+				"Value": true
+			}
+		},
+		"DETECTION_LOGIC_PARAMETERS": {
+			"DETECTION_PERIODIC_UPDATE_INTERVAL": {
+				"Description": "",
+				"Type": "UInt8",
+				"Value": 5
+			},
+			"STORECOUNT_RAW_ACCEL_DATA_XYZ": {
+				"Description": "In seconds, 0 disabled, Max 180",
+				"Type": "UInt8",
+				"Value": 0
+			}
+		},
+		"CAMERA_PARAMETERS": {
+			"TIMEOUT": {
+				"Description": "Time in millisecond: Time before the camera takes picture and shuts down",
+				"Type": "UInt32",
+				"Value": 500
+			},
+			"MODE": {
+				"Description": "0 to 7 : for more info: https://www.raspberrypi.org/documentation/raspbian/applications/camera.md",
+				"Type": "UInt8",
+				"Value": 2
+			},
+			"QUALITY": {
+				"Description": "Set JPEG quality from 0 to 100",
+				"Type": "UInt8",
+				"Value": 100
+			}
+		},
+		"HEATER_PARAMETERS": {
+			"TEMPERATURE_THRESH": {
+				"Description": "heaters turns on below this Temperature in degree C",
+				"Type": "Int",
+				"Value": 10
+			},
+			"HYSTERSIS_TEMPERATURE": {
+				"Description": "TEMPERATURE_THRESH + HYSTERSIS_TEMPERATURE is temp(in degree C) above which the heaters turns off",
+				"Type": "UInt8",
+				"Value": 2
+			},
+			"HEATER_ENABLE": {
+				"Description": "true: enable and false: disable the heater logic",
+				"Type": "Bool",
+				"Value": true
+			}
+		},
+		"MAGNETOMETER_CALIB_PARAMETERS": {
+			"CALIBRATION_ENABLED": {
+				"Description": "enable or disable calibration process",
+				"Type": "Bool",
+				"Value": false
+			},
+			"CALIBRATION_PROCESS_TIME": {
+				"Description": "In seconds, time to calibrate magnetometer ",
+				"Type": "UInt8",
+				"Value": 45
+			},
+			"CALIBRATION_START_TIME": {
+				"Description": "In seconds, Time to expose RGB sensor with light to start magnetometer calibration process",
+				"Type": "UInt8",
+				"Value": 5
+			}
+		}
+	}
+}
